@@ -1,9 +1,17 @@
+:root {
+  --grayl: #282c34;
+  --white: white;
+  --ligtBlue: rgb(139, 139, 250);
+  --ligtBlues: rgb(87, 87, 255);
+
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -13,15 +21,35 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-header, .App--footer {
+  background-color: var(--grayl);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
-  color: white;
+}
+.mini__header a, .footer__links a{
+    color: var(--white) ;
+    padding: .5rem;
+    text-decoration: none;
+    transition: 0.5s ease-in;
+}
+.mini__header a:hover, .footer__links a:hover{
+  opacity: 0.6;
+  color: var(--ligtBlues);
+  text-decoration: underline;
+}
+.App--footer {
+  color: var(--white);
+}
+.mini__header a.active {
+  color: var(--ligtBlue);
+  cursor: default;
+}
+
+.footer__links a.active--link {
+  color: var(--ligtBlues);
+  cursor: default;
 }
 
 .App-link {
@@ -35,4 +63,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+main {
+  height: 100vh;
+  overflow-y: scroll;
 }
