@@ -1,0 +1,15 @@
+.mini-content {
+    background-color: rgb(245, 71, 71);
+    width: 900px;
+}
+
+.mini__list :is(li , a) > click me{
+    color: blueviolet;
+    text-decoration: none;
+}
+
+div :is(.wrapper) {
+    max-width: 768px;
+    background-color: cadetblue;
+}
+
